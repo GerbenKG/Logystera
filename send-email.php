@@ -15,12 +15,19 @@ $mail = new PHPMailer(true);
 $mail->isSMTP();
 $mail->SMTPAuth = true;
 
-$mail->Host= "smtp.example.com";
+$mail->Host= "smtp.gmail.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port= 587;
 
-$mail->Username = "";
-$mail->Password= "";
+$mail->Username = "g.e.dekoninggans@gmail.com";
+$mail->Password= "stage88.";
 
 $mail->setFrom($email, $name);
 $mail->addAddress("g.e.dekoninggans@gmail.com");
+
+$mail->Subject = $subject;
+$mail->Body = $message;
+
+$mail->send();
+
+echo "emailt sent";
