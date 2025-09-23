@@ -54,9 +54,20 @@
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button class="text-gray-900">
+                    <button id="mobile-menu-button" class="text-gray-900">
                         <i data-feather="menu"></i>
                     </button>
+                    <div id="mobile-menu" class="hidden absolute top-20 right-0 w-full bg-white shadow-lg py-4 px-6">
+                        <div class="flex flex-col space-y-4">
+                            <a href="#" class="text-gray-900 hover:text-amber-500 transition">Projects</a>
+                            <a href="#" class="text-gray-900 hover:text-amber-500 transition">Services</a>
+                            <a href="#" class="text-gray-900 hover:text-amber-500 transition">About</a>
+                            <a href="#contact-form" class="text-gray-900 hover:text-amber-500 transition">Contact</a>
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-full text-sm font-medium transition duration-300 shadow-md hover:shadow-lg">
+                                Get a Quote
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -333,6 +344,21 @@
 
         // Initialize Feather Icons
         feather.replace();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
     </script>
 </body>
 </html>
