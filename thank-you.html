@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logystera | Innovative Vault Solutions</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon_logystera_16x16.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_logystera_32x32.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.85) 100%);
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #f59e0b;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/Logystera/">
+                        <img src="images/logo_full.svg" alt="Vault Architecture Logo" class="w-[200px] h-auto">
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#" class="nav-link px-3 py-2 text-sm font-medium text-gray-900 hover:text-amber-500 transition">Projects</a>
+                        <a href="#" class="nav-link px-3 py-2 text-sm font-medium text-gray-900 hover:text-amber-500 transition">Services</a>
+                        <a href="#" class="nav-link px-3 py-2 text-sm font-medium text-gray-900 hover:text-amber-500 transition">About</a>
+                        <a href="#contact-form" class="nav-link px-3 py-2 text-sm font-medium text-gray-900 hover:text-amber-500 transition">Contact</a>
+                        <button onclick="document.getElementById('demo-modal').classList.remove('hidden')" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-full text-sm font-medium transition duration-300 shadow-md hover:shadow-lg">
+                            Request Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-900">
+                        <i data-feather="menu"></i>
+                    </button>
+                    <div id="mobile-menu" class="hidden absolute top-20 right-0 w-full bg-white shadow-lg py-4 px-6">
+                        <div class="flex flex-col space-y-4">
+                            <a href="#" class="text-gray-900 hover:text-amber-500 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
+                            <a href="#" class="text-gray-900 hover:text-amber-500 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
+                            <a href="#" class="text-gray-900 hover:text-amber-500 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+                            <a href="#contact-form" class="text-gray-900 hover:text-amber-500 transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+                            <button onclick="document.getElementById('demo-modal').classList.remove('hidden'); document.getElementById('mobile-menu').classList.add('hidden')" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-full text-sm font-medium transition duration-300 shadow-md hover:shadow-lg">
+                                Request Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative hero-bg text-white min-h-screen flex items-center pt-20">
+        <div id="vanta-bg" class="absolute inset-0"></div>
+        <div class="absolute inset-0 bg-[url('images/background_logystera.svg')] bg-cover bg-center opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                        Thank <span class="text-amber-400">You!</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
+                        We've succesfully received your message and we'll be in contact soon.  
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full text-lg font-medium transition duration-300 shadow-md hover:shadow-lg">
+                            <a href="/">Back to Home</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+            <a href="#why" class="animate-bounce">
+                <i data-feather="chevron-down" class="text-white w-10 h-10"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Logystera</h3>
+                    <p class="text-gray-400 mb-6">
+                        Innovative design solutions that stand the test of time. Creating spaces that inspire and endure.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Residential Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Commercial Architecture</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Interior Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Urban Planning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sustainability Consulting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="w-5 h-5 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>123 Design Avenue, Creative District, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="w-5 h-5 mr-3"></i>
+                            <span>(212) 555-1234</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="w-5 h-5 mr-3"></i>
+                            <span></span><a href="mailto:info@logystera.com">info@logystera.com</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>© <script>document.write(new Date().getFullYear())</script> Logystera. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js globe effect
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xf59e0b,
+            backgroundColor: 0x0f172a,
+            size: 0.8
+        });
+
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
